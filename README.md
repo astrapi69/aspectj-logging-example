@@ -44,21 +44,25 @@ java -javaagent:/path/to/aspectjweaver-1.9.19.jar -Daj.weaving.verbose=true -jar
 If using IntelliJ IDEA, configure the VM options as described in the tutorial to run the application directly from the IDE.
 
 Example Code Structure
-```graphql
 
+```graphql
 src
 ├── main
 │   ├── java
-│   │   └── com
-│   │       └── example
-│   │           ├── LoggingAspect.java  # Aspect for logging method calls
-│   │           ├── SampleService.java  # Sample service with methods to intercept
-│   │           └── MainApp.java        # Main application class
+│   │   ├── com
+│   │   │   └── example
+│   │   │       ├── LoggingAspect.java  # Aspect for logging method calls
+│   │   │       └── SampleService.java  # Sample service with methods to intercept
+│   │   └── aspectj
+│   │       └── logging
+│   │           └── example
+│   │               └── App.java        # Main application class
 │   └── resources
 │       └── META-INF
 │           └── aop.xml                 # AspectJ load-time weaving configuration
 
 ```
+
 ## Dependencies
 
 * AspectJ (1.9.19): For aspect-oriented programming.
