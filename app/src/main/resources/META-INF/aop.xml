@@ -1,0 +1,11 @@
+<aspectj>
+    <weaver>
+        <!-- Include all classes in your application (you can limit this to certain packages) -->
+        <include within="com.example..*"/>
+    </weaver>
+
+    <aspects>
+        <!-- Specify the fully qualified name of the aspect class -->
+        <aspect name="com.example.LoggingAspect"/>
+    </aspects>
+</aspectj>
